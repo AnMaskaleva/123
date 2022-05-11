@@ -3,26 +3,26 @@ const tabsContent = document.querySelectorAll('.tab-content');
 const tabParent = document.querySelector('.hero-menu_header');
 
 function hideTabContent(){
-    tabsContent.forEach(item=>{
+    tabsContent.forEach(item => {
         item.style.display = 'none';
     });
-    tabs.forEach(item=>{
+    tabs.forEach(item => {
         item.classList.remove('current');
     });
 }
 
-function showTabContent(i=0){
-    tabsContent[i].style.display='block';
+function showTabContent(i = 0){
+    tabsContent[i].style.display = 'block';
     tabs[i].classList.add('current');
 }
 
 hideTabContent();
 showTabContent();
 
-tabParent.addEventListener('click', (event)=>{
+tabParent.addEventListener('click', (event) => {
     const target = event.target;
     if (target && target.classList.contains('qwerty-tab')){
-        tabs.forEach((item,i)=>{
+        tabs.forEach((item,i) => {
             if(target == item){
                 hideTabContent();
                 showTabContent(i);
@@ -30,4 +30,3 @@ tabParent.addEventListener('click', (event)=>{
         })
     }
 })
-asd
